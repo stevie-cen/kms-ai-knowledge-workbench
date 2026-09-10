@@ -1,0 +1,12 @@
+image: alpine:3.20
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp "KB Update Check/Mockup/kms-ai-knowledge-workbench.html" public/index.html
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
